@@ -6,6 +6,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { useState } from "react";
 import { showItemList } from "../../constants/constant";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import HeaderBottom from "./HeaderBottom";
 
 const Header = () => {
   const [showAll, setShowAll] = useState(false);
@@ -78,10 +79,14 @@ const Header = () => {
         <div className="headerHover flex flex-col items-start justify-center relative">
           <ShoppingCartOutlinedIcon />
           <p className="text-sm font-semibold -mt-1 text-whiteText">
-            Cart <span className="absolute text-xs -top-1 left-6 font-semibold p-1 h-4 bg-[#f3a847] text-amazon_blue rounded-full flex justify-center items-center">0</span>
+            Cart{" "}
+            <span className="absolute text-xs -top-1 left-6 font-semibold p-1 h-4 bg-[#f3a847] text-amazon_blue rounded-full flex justify-center items-center">
+              0
+            </span>
           </p>
         </div>
       </div>
+      <HeaderBottom />
     </div>
   );
 };
