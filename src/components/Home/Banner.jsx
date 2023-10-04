@@ -37,8 +37,7 @@ const Banner = () => {
             alignItems: "center",
             justifyContent: "space-around",
           }}>
-          {" "}
-          {dots}{" "}
+          {dots}
         </ul>
       </div>
     ),
