@@ -6,87 +6,41 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { useState } from "react";
 import { showItemList } from "../../constants/constant";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import HeaderBottom from "./HeaderBottom";
+import sglogo from "../../assets/sgbites/sglogo1.png";
 
 const Header = () => {
   const [showAll, setShowAll] = useState(false);
   return (
-    <div>
-      <div className="w-full bg-amazon_blue text-white px-4 py-3 flex items-center gap-4">
-        <div className="headerHover">
-          <img className="w-24 mt-2" src={logo} alt="logo" />
-        </div>
-
-        <div className="headerHover">
-          <LocationOnOutlinedIcon />
-          <p className="text-sm text-lightText font-light flex flex-col">
-            Deliver to{" "}
-            <span className="text-sm font-semibold -mt-1 text-whiteText">
-              Bengaluru
-            </span>
-          </p>
-        </div>
-
-        <div className="h-10 rounded-md flex flex-grow relative">
-          <span
-            onClick={() => {
-              setShowAll((prev) => !prev);
-            }}
-            className="w-14 h-full bg-gray-200 hover:bg-gray-300 border-2 cursor-pointer duration-300 text-sm text-amazon_blue font-titleFont flex items-center justify-center rounded-tl-md rounded-bl-md">
-            All <ArrowDropDownOutlinedIcon />
-          </span>
-          {showAll && (
-            <div>
-              <ul className="absolute w-56 h-80 top-10 left-0 overflow-y-scroll overflow-x-hidden bg-white border-[1px] border-amazon_blue text-black p2 flex flex-col gap-1 z-50">
-                {showItemList.map((item) => (
-                  <li
-                    className="p-1 text-sm tracking-wide font-titleFont border-b-[1px] border-b-transparent hover:border-b-amazon_blue cursor-pointer duration-200"
-                    key={item._id}>
-                    {item.title}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-          <input
-            className="h-full text-base text-amazon_blue flex-grow outline-none border-none px-2"
-            type="text"
-          />
-          <span className="w-12 h-full flex items-center justify-center bg-amazon_yellow hover:bg-[#f3a847] duration-300 text-amazon_blue cursor-pointer rounded-tr-md rounded-br-md">
-            <SearchOutlinedIcon />
-          </span>
-        </div>
-        <div className="headerHover flex flex-col items-start justify-center">
-          <p className="text-sm text-lightText font-light">Hello, sign in</p>
-          <p className="text-sm font-semibold -mt-1 text-whiteText">
-            Accounts & Lists{" "}
-            <span>
-              <ArrowDropDownOutlinedIcon />
-            </span>
-          </p>
-        </div>
-
-        <div className="headerHover flex flex-col items-start justify-center relative">
-          <p className="text-sm text-lightText font-light">Returns</p>
-          <p className="text-sm font-semibold -mt-1 text-whiteText">
-            & Orders{" "}
-            <span>
-              <ArrowDropDownOutlinedIcon />
-            </span>
-          </p>
-        </div>
-
-        <div className="headerHover flex flex-col items-start justify-center relative">
-          <ShoppingCartOutlinedIcon />
-          <p className="text-sm font-semibold -mt-1 text-whiteText">
-            Cart{" "}
-            <span className="absolute text-xs -top-1 left-6 font-semibold p-1 h-4 bg-[#f3a847] text-amazon_blue rounded-full flex justify-center items-center">
-              0
-            </span>
-          </p>
-        </div>
-      </div>
-      <HeaderBottom />
+    <div className="bg-black text-white">
+      <ul className="flex justify-around items-center">
+        <li>
+          <div className="w-20 cursor-pointer  m-3">
+            <img src={sglogo} alt="logo" />
+          </div>
+        </li>
+        <li className="headerHover">Home</li>
+        <li className="headerHover">
+          Breakfast <ArrowDropDownOutlinedIcon />
+        </li>
+        <li className="headerHover">
+          Lunch
+          <ArrowDropDownOutlinedIcon />
+        </li>
+        <li className="headerHover">
+          Dinner
+          <ArrowDropDownOutlinedIcon />
+        </li>
+        <li className="headerHover">Healthy</li>
+        <li className="headerHover">
+          Snacks
+          <ArrowDropDownOutlinedIcon />
+        </li>
+        <li className="headerHover">
+          Sweets
+          <ArrowDropDownOutlinedIcon />
+        </li>
+        <li className="headerHover hover:border">Buy Premium 👑</li>
+      </ul>
     </div>
   );
 };

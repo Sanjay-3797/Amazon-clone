@@ -61,7 +61,10 @@ const Banner = () => {
     ),
   };
   return (
-    <div className="w-full">
+    <div className="w-full bg-black">
+      {/* <button className="text-white bg-black rounded-md px-5 py-1 font-semibold cursor-pointer hover:text-amber-200 active:bg-gray-600 float-right fixed top-96 right-5 border border-gray-100">
+        Chat..
+      </button> */}
       <div className="w-full h-full relative">
         <Slider {...settings}>
           <div>

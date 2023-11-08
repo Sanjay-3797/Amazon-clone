@@ -8,7 +8,6 @@ const Footer = () => {
     <div className="font-titleFont">
       <FooterTop />
       <FooterMiddle />
-      <FooterBottom />
     </div>
   );
 };
