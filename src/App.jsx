@@ -6,7 +6,6 @@ import {
   Outlet,
   Route,
   RouterProvider,
-  ScrollRestoration,
 } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
